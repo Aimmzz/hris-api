@@ -12,4 +12,8 @@ class EmployeeRepository {
     )
 
     fun findAll(): List<Employee> = employees
+
+    fun findById(id: String): Employee? {
+        return employees.find { it.id == id }
+    }
 }

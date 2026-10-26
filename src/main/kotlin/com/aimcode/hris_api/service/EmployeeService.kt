@@ -10,4 +10,8 @@ class EmployeeService(private val employeeRepository: EmployeeRepository) {
     fun getAllEmployees(): List<Employee> {
         return employeeRepository.findAll()
     }
+
+    fun findById(id: String): Employee? {
+        return employeeRepository.findById(id)
+    }
 }
