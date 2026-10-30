@@ -1,0 +1,10 @@
+#spring.application.name=hris-api
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hris_db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

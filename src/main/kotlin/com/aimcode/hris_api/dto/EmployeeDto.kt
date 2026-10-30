@@ -12,7 +12,7 @@ data class EmployeeRequest (
 )
 
 data class EmployeeResponse (
-    val id: String,
+    val id: String? = null,
     val name: String,
     val position: String
 )

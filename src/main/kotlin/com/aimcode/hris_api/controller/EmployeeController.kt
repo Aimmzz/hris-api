@@ -40,11 +40,11 @@ class EmployeeController(
     fun createEmployee(
         @Valid @RequestBody request: EmployeeRequest
     ): EmployeeResponse {
-        val generatedId = "3"
+        val savedEmployee = employeeService.createEmployee(name = request.name, position = request.position)
         return EmployeeResponse(
-            id = generatedId,
-            name = request.name,
-            position = request.position,
+            id = savedEmployee.id!!,
+            name = savedEmployee.name,
+            position = savedEmployee.position,
         )
     }
 }
